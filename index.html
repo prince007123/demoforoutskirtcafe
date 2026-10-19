@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outskirt Cafe & Restaurant | Gyan Khera, Tanakpur</title>
+<meta name="description" content="Outskirt Cafe & Restaurant in Gyan Khera, Tanakpur, Uttarakhand. View the digital menu, get directions and contact us on WhatsApp.">
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE/">
+<meta property="og:title" content="Outskirt Cafe & Restaurant, Tanakpur">
+<meta property="og:description" content="A roadside cafe and restaurant for locals and travellers in Gyan Khera, Tanakpur.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=70">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161412'/%3E%3Cpath d='M16 24h26v12a10 10 0 0 1-10 10h-6a10 10 0 0 1-10-10zM42 27h5a5 5 0 0 1 0 10h-5' fill='none' stroke='%23F2B705' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#menu">Skip to menu</a>
+<header class="nav" id="top">
+  <a class="logo" href="#home"><span class="logo-mark">O</span>Outskirt <small>Cafe & Restaurant</small></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
+  <nav id="links" class="links">
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
+    <a class="btn btn-wa" data-wa="menu" href="#contact">WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="kicker">Outskirt Cafe & Restaurant</p>
+    <h1>Good Food. Great Stops. Memorable Moments.</h1>
+    <p>A convenient food stop in Gyan Khera, Tanakpur, for visitors, locals and anyone travelling through.</p>
+    <div class="row">
+      <a class="btn btn-gold" href="#menu">Explore Menu</a>
+      <a class="btn btn-ghost" data-directions href="#location" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+    <div class="badge" id="ratingBadge"></div>
+  </div>
+</section>
+
+<section class="info wrap" aria-label="Quick information" id="info"></section>
+
+<section class="wrap section" id="menu">
+  <h2>Our menu</h2>
+  <p class="note" id="menuNote"></p>
+  <div class="filters" id="filters" role="group" aria-label="Menu categories"></div>
+  <div class="grid" id="menuGrid"></div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap two">
+    <div>
+      <h2>A stop worth making</h2>
+      <p>Outskirt Cafe & Restaurant sits in Gyan Khera, Tanakpur, easy to reach for people travelling through the area and for those who live nearby. Come in for a meal, a drink or a break from the road.</p>
+      <p>This site puts the menu and location in one place, so you can check what is on offer, find the way and message the cafe before you set out.</p>
+    </div>
+    <img class="rounded" loading="lazy" id="aboutImg" alt="Sample restaurant interior (temporary demo image)">
+  </div>
+</section>
+
+<section class="wrap section" id="gallery">
+  <h2>Gallery</h2>
+  <p class="note">Sample images for the demo. Replace with real photographs of the cafe.</p>
+  <div class="gallery" id="galleryGrid"></div>
+</section>
+
+<section class="band dark" id="reviews">
+  <div class="wrap center">
+    <h2>What Google shows</h2>
+    <div class="big"><b id="rBig"></b><span id="rStars" aria-hidden="true">★★★★☆</span></div>
+    <p id="rCount"></p>
+    <p class="note light">Preview state: customer review text will appear here only once verified reviews are available.</p>
+    <a class="btn btn-gold" id="reviewBtn" target="_blank" rel="noopener" href="#reviews">View on Google Maps</a>
+  </div>
+</section>
+
+<section class="wrap section" id="location">
+  <h2>Find us</h2>
+  <div class="two">
+    <div>
+      <address id="addr"></address>
+      <div class="row">
+        <button class="btn btn-dark" id="copyAddr" type="button">Copy address</button>
+        <a class="btn btn-gold" data-directions target="_blank" rel="noopener" href="#location">Get Directions</a>
+      </div>
+      <p class="toast" id="copyMsg" role="status"></p>
+    </div>
+    <iframe id="map" title="Map showing Outskirt Cafe & Restaurant" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Ask us on WhatsApp</h2>
+      <div class="row">
+        <a class="btn btn-wa" data-wa="menu" href="#contact">Ask about the menu</a>
+        <a class="btn btn-dark" data-wa="table" href="#contact">Ask about table availability</a>
+      </div>
+      <p class="note" id="waNote"></p>
+      <form id="enq" novalidate>
+        <label for="fn">Your name</label><input id="fn" autocomplete="name">
+        <label for="fm">Your message</label><textarea id="fm" rows="3"></textarea>
+        <p class="err" id="fe" role="alert"></p>
+        <button class="btn btn-gold" type="submit">Open in WhatsApp</button>
+        <p class="note">Demo form: nothing is sent or booked unless WhatsApp opens and you press send.</p>
+      </form>
+    </div>
+    <div class="qr">
+      <h3>Scan to visit our website</h3>
+      <div id="qrBox" aria-label="QR code for this website"></div>
+      <p class="err" id="qrErr" role="alert"></p>
+      <button class="btn btn-dark" id="qrDl" type="button">Download QR code</button>
+      <p class="note">Print it for tables, menus or flyers. It always points to this site's live address.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Outskirt Cafe & Restaurant</strong><p id="fAddr"></p><p id="fPhone"></p></div>
+    <div class="flinks"><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a data-directions target="_blank" rel="noopener" href="#location">Directions</a><a id="insta" target="_blank" rel="noopener" href="#">Instagram</a></div>
+  </div>
+  <p class="demo">Website demo: a design proposal, not an official site of Outskirt Cafe & Restaurant. &copy; <span id="yr"></span></p>
+</footer>
+
+<a class="fab" id="fab" data-wa="menu" href="#contact" aria-label="Chat on WhatsApp">WhatsApp</a>
+<button class="totop" id="toTop" aria-label="Back to top" hidden>↑</button>
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image preview"><button id="lbClose" aria-label="Close">×</button><img id="lbImg" alt=""></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
